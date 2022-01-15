@@ -10,6 +10,7 @@ let divUsuarios = $('#divUsuarios');
 let formEnviar = $('#formEnviar');
 let txtMensaje = $('#txtMensaje');
 let divChatbox = $('#divChatbox');
+let chatNombreSala = document.getElementById('chatNombreSala');
 
 function renderizarUsuarios(personas){
 
@@ -18,6 +19,8 @@ function renderizarUsuarios(personas){
     let html = `<li>
         <a href="javascript:void(0)" class="active"> Chat de <span>${parametros.get('sala')}</span></a>
     </li>`
+
+    chatNombreSala.textContent = sala;
 
     for(let i = 0; i < personas.length; i++){
 
