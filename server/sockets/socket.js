@@ -49,7 +49,6 @@ io.on('connection', (client) => {
         client.broadcast.to(personaBorrada.sala).emit('listaPersonas',usuarios.getPersonasPorSala(personaBorrada.sala));
 
     })
-
     // Mensajes privados
     client.on('mensajePrivado', data => {
 
